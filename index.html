@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Doc - Document Summarizer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>" type="image/svg+xml">
+<!-- Google tag (gtag.js) -->
+z
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FEENZRHZFB');
+</script>
+
+</head>
+<body>
+    <div class="gradient-bg"></div>
+    <div class="container">
+        <header>
+            <div class="hamburger-menu" id="hamburgerMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <h1><i class="fas fa-brain"></i> Smart Doc</h1>
+            <p class="tagline">Transform your documents into concise summaries with AI</p>
+            
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="notes.html"><i class="fas fa-pencil-alt"></i> Study Notes</a></li>
+                    <li><a href="mnemonics.html"><i class="fas fa-brain"></i> Mnemonics</a></li>
+                    <li><a href="doubts.html"><i class="fas fa-question-circle"></i> Ask Doubts</a></li>
+                    <li><a href="test.html"><i class="fas fa-clipboard-check"></i> Test Yourself</a></li>
+                    <li><a href="https://forms.gle/czBn8CQcu997yoKh7" target="_blank"><i class="fas fa-comment"></i> Feedback</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div class="upload-section">
+            <div class="upload-box" id="dropZone">
+                <div class="upload-icon">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                </div>
+                <h3>Drag & Drop your document here</h3>
+                <p>or</p>
+                <input type="file" id="fileInput" accept=".txt,.doc,.docx,.pdf">
+                <button class="upload-btn">
+                    <i class="fas fa-file-upload"></i>
+                    Choose File
+                </button>
+            </div>
+        </div>
+
+        <div class="summary-section" id="summarySection">
+            <div class="summary-header">
+                <h2><i class="fas fa-lightbulb"></i> Smart Summary</h2>
+                <div class="summary-tabs">
+                    <button class="tab-button active" data-tab="summary"><i class="fas fa-file-alt"></i> Summary</button>
+
+                </div>
+            </div>
+            
+            <div class="tab-content">
+                <div id="summary-tab" class="tab-pane active">
+                    <div class="summary-content" id="summaryContent">
+                        <!-- Summary will be displayed here -->
+                    </div>
+                </div>
+                
+                <div id="notes-tab" class="tab-pane">
+                    <div class="notes-content" id="notesContent">
+                        <!-- Study notes will be displayed here -->
+                        <p>Study notes will appear here after processing your document.</p>
+                    </div>
+                </div>
+                
+                <div id="mnemonics-tab" class="tab-pane">
+                    <div class="mnemonics-content" id="mnemonicsContent">
+                        <!-- Mnemonics will be displayed here -->
+                        <p>Helpful mnemonics will appear here after processing your document.</p>
+                    </div>
+                </div>
+                
+                <div id="doubts-tab" class="tab-pane">
+                    <div class="doubts-content" id="doubtsContent">
+                        <!-- Doubts section will be displayed here -->
+                        <textarea id="doubtQuestion" placeholder="Ask a question about the document..."></textarea>
+                        <button id="askDoubtBtn" class="action-btn">Ask Question</button>
+                        <div id="doubtAnswer"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="action-buttons">
+                <button class="action-btn tts-btn"><i class="fas fa-volume-up"></i> Text to Speech</button>
+                <button class="action-btn test-yourself-btn" id="testYourselfBtn"><i class="fas fa-pencil-alt"></i> Test Yourself</button>
+                <button class="action-btn export-btn" id="exportBtn"><i class="fas fa-download"></i> Export</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="processingIndicator" class="processing-indicator" style="display: none;">
+        <div class="spinner"></div>
+        <p>Processing...</p>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+    <script>
+        // Initialize PDF.js worker
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.worker.min.js';
+    </script>
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <footer class="site-footer">
+    <p>
+        © 2025 Smart Doc.
+        Designed & Developed by
+        <span class="developer-name">Nikhil P</span>
+    </p>
+    <p class="footer-tagline">Built with passion and AI.</p>
+</footer>
+   
+</body>
+</html>

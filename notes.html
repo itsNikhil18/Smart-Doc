@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Doc - Study Notes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="gradient-bg"></div>
+    <div class="container">
+        <header>
+            <div class="hamburger-menu" id="hamburgerMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <h1><i class="fas fa-brain"></i> Smart Doc</h1>
+            <p class="tagline">Transform your documents into concise summaries with AI</p>
+            
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="notes.html" class="active"><i class="fas fa-pencil-alt"></i> Study Notes</a></li>
+                    <li><a href="mnemonics.html"><i class="fas fa-brain"></i> Mnemonics</a></li>
+                    <li><a href="doubts.html"><i class="fas fa-question-circle"></i> Ask Doubts</a></li>
+                    <li><a href="test.html"><i class="fas fa-clipboard-check"></i> Test Yourself</a></li>
+                    <li><a href="https://forms.gle/czBn8CQcu997yoKh7" target="_blank"><i class="fas fa-comment"></i> Feedback</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div class="feature-section">
+            <h2><i class="fas fa-pencil-alt"></i> Study Notes</h2>
+            
+            <div id="notesContent" class="feature-content">
+                <div class="no-document-message">
+                    <i class="fas fa-file-upload"></i>
+                    <p>Please upload a document on the home page first to generate study notes.</p>
+                    <a href="index.html" class="action-btn"><i class="fas fa-arrow-left"></i> Go to Upload</a>
+                </div>
+            </div>
+            
+            <div class="action-buttons" style="display: none;">
+                <button class="action-btn export-btn" id="exportBtn"><i class="fas fa-download"></i> Export Notes</button>
+                <button class="action-btn print-btn" id="printBtn"><i class="fas fa-print"></i> Print</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="notes.js"></script>
+    <script src="nav.js"></script>
+    
+</body>
+</html> 
