@@ -1,5 +1,10 @@
 # Smart Doc
 
+A web-based document utility project.
+
+- **Live Website:** https://itsnikhil18.github.io/Smart-Doc/
+- **GitHub Repository:** https://github.com/itsNikhil18/Smart-Doc
+
 ### Simplify Documents. Save Time. Work Smarter.
 
 Smart Doc is a document management and summarization platform designed to make working with information easier, faster and more efficient.
